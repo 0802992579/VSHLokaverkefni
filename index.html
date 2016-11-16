@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Bjork</title>
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascript/smooth-scroll.js"></script> 
+
+</head>
+<body>
+  
+<header class="header">
+  
+     <div class="menu">
+     <input type="checkbox" id="toggle">
+      <label for="toggle">&#9776; menu</label>
+      <nav class="nav">    
+      <ul class="nav__items">
+        <li class="nav__item"><a href="index.html" class="nav__link_selected">Home</a></li>
+        <li class="nav__item"><a href="schedule.html" class="nav__link">Schedule</a></li>
+        <li class="nav__item"><a href="purchase.html" class="nav__link">Purchase</a></li>
+        <li class="nav__item"><a href="venue.html" class="nav__link">Venue</a></li>
+      </ul>
+      </nav>  
+        </div>
+    <div class="container">
+      <h1 class="header__title">Bjork Digital</h1>
+    </div>
+    
+
+</header>
+
+<main class="content">
+ 
+  <section class="component__section">
+    <h2 class="component__sub-title">The Project</h2>
+    <div class="bjork">
+        <div class="bjork__avatar"><img src="bjork1.jpg" width="100%"></div>
+        <div class="bjork__description">
+          <p class="bjork__excerpt">
+          Björk Digital is an experimental VR project, a total merging of Björk’s music and cutting-edge technology that expands the musical experiment realm. Harpa Concert Hall and Conference Centre presents the project in Iceland in cooperation with the Iceland Airwaves Music Festival. The exhibition opens parallel to the festival but this year Björk will give two concerts at Iceland Airwaves.The visitor is invited to explore Björk Digital – A new virtual reality project from the musician, alongside other collaborations with some of the finest filmmakers and programmers in the world. The exhibition will stretch between three levels on the east side of Harpa.
+	  </p>
+         </div>
+        </div>
+     </div>
+     <div class="bjork">
+    
+	<div class="bjork__avatar"><img src="bjork2.jpg" width="100%"></div>
+        <div class="bjork__description">
+          <p class="bjork__excerpt">
+          Björk recently gave a concert at the Royal Albert Hall, accompanied by a string ensemble and received great acclaim. Björk is an artist constantly experimenting with new expressions by introducing cutting edge technology to her music. She believes that the latest VR technology can connect her and the audience intimately; in a different way than CDs or live concerts could, it is a new type of private theatre that provides an appropriate sense of one on one solitude for you to experience music as never before. Björk’s “heartbreak saga” album“Vulnicura” was born from the extremely personal event that it is to break up with someone, and then turned that into VR for this exhibition, “Björk Digital” –an on-going project that explores the possibilities of VR and music.
+	  </p>
+	 </div>
+        </div>
+       </div>
+     <div class="bjork">
+	<div class="bjork__avatar"><img src="bjork4.jpg" width="100%"></div>
+        <div class="bjork__description">
+           <p class="bjork__excerpt">
+  	   This exhibition also allows you to interactively experience the multimedia album “Biophilia”; An album with songs turned into applications that is being used in the educational curriculum in Scandinavia, whose theme is the confluence of nature, music and technology. Additionally, 29 songs from Björk’ career have been remastered in 5.1ch sound especially for this exhibition. You can enjoy them in chronological order in the Cinema Room. Björk says “an artist’s work is to put soul into technology”. That is certainly achieved in this exhibition that has already travelled to Australia, Japan and in October to Somerset House in London. The Björk Digital show in Harpa is the largest edition of the show and includes it´s newest addition, Family Room.
+	   </p>
+	 </div>
+        </div>
+    </div>
+   </div>
+  </section>
+
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <script>
+     function offset(size)
+     {
+       if (size < 768){
+     	smoothScroll.init({offset: 250,}); //Offset for large menu in small screen
+       }
+       else
+       {
+     	smoothScroll.init({offset: 35,}); //Offset for small menu in large screen
+       }
+     }
+     var size = $(window).width();
+     offset(size); //find offset in begining
+     $(document).ready(function(){  //find offset if window resized
+     $(window).resize(function(){
+            var size = $(window).width();
+           offset(size);
+
+      });
+    });
+
+    </script>
+  </div>
+</footer>
+
+
+</body>
+</html>

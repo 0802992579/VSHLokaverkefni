@@ -1,0 +1,666 @@
+﻿// =============================================================================
+// FONTS
+// =============================================================================
+$font-family--primary: "Oxygen", Helvetica, sans-serif;
+$font-size--xsmall: 12px;
+$font-size--small: 14px;
+$font-size--smedium: 16px;
+$font-size--medium: 18px;
+$font-size--large: 22px;
+$font-size--xlarge: 28px;
+$font-size--xxlarge: 36px;
+$font-size--ultra: 42px;
+$font-size--ultra-large: 48px;
+$font-size--ultra-xlarge: 60px;
+$font-size--ultra-xxlarge: 84px;
+
+$line-height--small: 1.2;
+$line-height--medium: 1.8;
+$line-height--large: 2.2;
+
+// =============================================================================
+// COLORS
+// =============================================================================
+
+$color1: red;
+$color2: yellow;
+$color3: green;
+$color4: blue;
+
+$color--neutral-xxdark: rgb(21,21,21);
+$color--neutral-xdark: rgb(39,39,39);
+$color--neutral-dark: rgb(59,59,59);
+$color--neutral: rgb(109,109,109);
+$color--neutral-light: rgb(129,129,129);
+$color--neutral-xlight: rgb(179,179,179);
+$color--neutral-xxlight: rgb(231,231,231);
+$color--neutral-xxxlight: rgb(241,241,241);
+
+$color--blue-dark: rgb(0,100,140);
+$color--blue: rgb(40,170,220);
+$color--blue-light: rgb(70,200,250);
+
+$color--theme: rgb(230,230,230);
+$color--theme-dark: darken($color--theme, 20%);
+$color--theme-light: lighten($color--theme, 20%);
+$color--theme-selected: rgb(60,60,160);
+$color--theme-menu: black;
+
+// =============================================================================
+// BREAKPOINTS
+// =============================================================================
+$breakpoint--xsmall: 30em;
+$breakpoint--small: 37.5em;
+$breakpoint--medium: 48em;
+$breakpoint--large: 60em;
+$breakpoint--xlarge: 80em;
+
+// =============================================================================
+// MIX-IN
+// =============================================================================
+@mixin center($horizontal: true, $vertical: true) {
+  position: absolute;
+
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+
+/* =============================================================================
+  VERTICAL ALIGNMENT - bjork
+============================================================================= */
+.bjork {
+  display: flex;
+  align-items: center;
+  margin: 0 auto 24px auto;
+  max-width: 960px;
+}
+
+.bjork:last-child {
+  margin-bottom: 0;
+}
+
+.bjork__avatar {
+  flex: 0 0 96px;
+  width: 96px;
+  height: 96px;
+  background-color: $color--neutral-xxlight;
+}
+
+.bjork__description {
+  flex: 1;
+  margin-left: 10px;
+  padding: 10px;
+ 
+}
+
+.bjork__bjorkname {
+  margin: 0 0 24px 0;
+  padding: 0;
+}
+
+.bjork__excerpt {
+  margin: 0;
+}
+
+
+/* =============================================================================
+  COMPONENT COMMONS
+============================================================================= */
+.component__section {
+  margin: 0 24px 48px;
+}
+
+.component__section:last-child {
+  margin-bottom: 0;
+}
+
+.component__sub-title {
+  margin-bottom: 12px;
+  color: $color--neutral-light;
+  font-size: $font-size--large;
+  font-weight: 300;
+  text-align: center;
+}
+
+
+/* =============================================================================
+
+  VERTICAL ALIGNMENT - bjork
+
+============================================================================= */
+.bjork {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /*margin: 0 auto 24px auto;
+  max-width: 960px;*/
+}
+
+.bjork:last-child {
+  margin-bottom: 0;
+}
+
+.bjork__avatar {
+  flex: 0 0 96px;
+  width: 96px;
+  height: 96px;
+  background-color: $color--neutral-xxlight;
+}
+
+.bjork__description {
+  flex: 1;
+  margin-left: 24px;
+  padding: 12px;
+}
+
+.bjork__bjorkname {
+  margin: 0 0 12px 0;
+  padding: 0;
+}
+
+.bjork__excerpt {
+  margin: 0;
+}
+@media all and (min-width:$breakpoint--small){
+ .bjork{
+    flex-direction: row;
+ }
+
+ .bjork__description {
+    flex: 1;
+    margin-left: 24px;
+    padding: 12px;
+    border: solid 1px $color--neutral-xxlight;
+ }
+
+ .bjork__bjorkname {
+    padding-top: 0;
+ }
+
+
+}
+/* =============================================================================
+  FONTS
+============================================================================= */
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../../fonts/oxygen/oxygen-v5-latin-300.eot');
+  src: local('Oxygen Light'), local('Oxygen-Light'),
+       url('../../fonts/oxygen/oxygen-v5-latin-300.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/oxygen/oxygen-v5-latin-300.woff2') format('woff2'),
+       url('../../fonts/oxygen/oxygen-v5-latin-300.woff') format('woff'),
+       url('../../fonts/oxygen/oxygen-v5-latin-300.ttf') format('truetype'),
+       url('../../fonts/oxygen/oxygen-v5-latin-300.svg#Oxygen') format('svg');
+}
+
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../fonts/oxygen/oxygen-v5-latin-regular.eot');
+  src: local('Oxygen'), local('Oxygen-Regular'),
+       url('../../fonts/oxygen/oxygen-v5-latin-regular.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/oxygen/oxygen-v5-latin-regular.woff2') format('woff2'),
+       url('../../fonts/oxygen/oxygen-v5-latin-regular.woff') format('woff'),
+       url('../../fonts/oxygen/oxygen-v5-latin-regular.ttf') format('truetype'),
+       url('../../fonts/oxygen/oxygen-v5-latin-regular.svg#Oxygen') format('svg');
+}
+
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../fonts/oxygen/oxygen-v5-latin-700.eot');
+  src: local('Oxygen Bold'), local('Oxygen-Bold'),
+       url('../../fonts/oxygen/oxygen-v5-latin-700.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/oxygen/oxygen-v5-latin-700.woff2') format('woff2'),
+       url('../../fonts/oxygen/oxygen-v5-latin-700.woff') format('woff'),
+       url('../../fonts/oxygen/oxygen-v5-latin-700.ttf') format('truetype'),
+       url('../../fonts/oxygen/oxygen-v5-latin-700.svg#Oxygen') format('svg');
+}
+
+/* =============================================================================
+  BOX SIZING
+============================================================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* =============================================================================
+  HTML & BODY
+============================================================================= */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  color: $color--neutral;
+  background-color: #fff;
+  font-family: $font-family--primary;
+  font-size: $font-size--small;
+  line-height: $line-height--medium;
+}
+
+/* =============================================================================
+  HEADINGS
+============================================================================= */
+h1, h2, h3, h4, h5, h6 {
+  color: $color--neutral-dark;
+  font-weight: 700;
+  line-height: $line-height--small;
+}
+
+h1 {
+  color: $color--theme-selected;
+}
+/* =============================================================================
+  LINKS
+============================================================================= */
+a {
+  color: $color--theme;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $color--theme-dark;
+}
+
+/* =============================================================================
+  TEXT STUFFS
+============================================================================= */
+b,
+strong {
+  font-weight: 700;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+.center{
+  text-align:center;
+}
+/* =============================================================================
+  TABLE STUFFS
+============================================================================= */
+table.center {
+  width:80%; 
+  margin-left:10%; 
+  margin-right:10%;
+}
+
+@media all and (min-width:$breakpoint--medium){
+   table.center {
+      width:20%; 
+      margin-left:40%; 
+      margin-right:40%;
+}
+
+}
+/* =============================================================================
+  1 -2 columns
+============================================================================= */
+@media all and (min-width:$breakpoint--medium){
+.column2 {
+    width: 100%;
+    text-align: justify;
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+     column-count: 2;
+     padding-right: 20%;
+    padding-left: 30%;	
+    padding-top: 70px;
+ } 
+
+
+
+}
+
+/* =============================================================================
+  EMBEDDED CONTENT
+============================================================================= */
+.kort{
+    @include center(true, false);
+}
+
+iframe {
+  width: 240px;
+  height: 160px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+video {
+  width: 80%;
+}
+
+
+@media all and (min-width: $breakpoint--small) {
+  iframe {
+  width: 480px;
+  height: 320px;
+  }
+
+  img {
+  max-width: 100px;
+  height: auto;
+  }
+
+  video {
+  width: 400px;
+  }
+
+}
+
+@media all and (min-width: $breakpoint--medium) {
+  iframe {
+  width: 600px;
+  height: 400px;
+  }
+
+  video {
+  width: 600px;
+  }
+
+}
+
+
+
+@media all and (min-width: $breakpoint--small) {
+}
+
+
+
+/* =============================================================================
+  PRIMARY LAYOUT STUFF
+============================================================================= */
+.container {
+  margin: 0 auto;
+  padding-top: 50px;
+  padding: 0 12px;
+  max-width: 960px;
+}
+
+@media all and ( min-width: $breakpoint--small ) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+@media all and ( min-width: $breakpoint--medium ) {
+  .container {
+    padding: 0 48px;
+  }
+}
+
+/* =============================================================================
+  DEMO HEADER
+============================================================================= */
+.header {
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: $color--theme;
+}
+
+.header-nav__link {
+  padding: 12px;
+  color: #fff;
+}
+
+.header-nav__link:hover {
+  color: #fff;
+  background-color: $color--theme-dark;
+  transition: all .5s ease;
+}
+
+.header__title {
+  margin: 24px;
+  padding: 0;
+  color: $color--theme-selected;
+  font-size: $font-size--xlarge;
+  font-weight: 300;
+  text-align: center;
+}
+
+@media all and ( min-width: $breakpoint--small ) {
+  .header__title {
+    margin: 36px;
+    font-size: $font-size--ultra;
+  }
+}
+
+/* =============================================================================
+  NAVIGATION
+============================================================================= */
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav {
+  background-color: $color--theme-menu;
+  margin: 0 0 24px 0;
+  padding: 0;
+}
+
+.nav__items {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  margin: 0;
+  padding: 4px;
+}
+
+.nav__link {
+  display: block;
+  margin: 0;
+  padding: 4px 24px;
+  border: solid 2px $color--theme;
+
+}
+
+.nav__link_selected {
+  display: block;
+  margin: 0;
+  padding: 4px 24px;
+  border: solid 2px $color--theme;
+  background-color: $color--theme-selected;
+
+}
+
+.nav__link:hover,
+.nav__item.active .nav__link {
+  color: black;
+  background-color: $color--theme;
+  transition: all .5s ease;
+}
+
+@media all and ( min-width: $breakpoint--medium ) {
+  .nav {
+    margin: 0 0 48px 0;
+  }
+}
+
+/* =============================================================================
+  MENU
+============================================================================= */
+
+input {
+  display: none;
+}
+label{
+  color: $color--theme-dark;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  padding: 5px 9px;
+  transition: all .5s ease;
+ 
+  width: 100%;
+  background-color: $color--neutral-xxxlight; 
+}
+label:hover {
+  color: $color--neutral;
+  transition: all .5s ease;
+}
+input:checked + label {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+  color: $color--theme-dark;
+}
+nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: all .2s ease;
+}
+
+
+.header__title
+{
+  margin-top:60px; 
+}
+
+input:checked ~ nav {
+  max-height: 500px;
+}
+
+
+.nav__item {
+ width:90%;  /*100% fullstærð*/
+}
+
+
+@media all and ( min-width: $breakpoint--small ) {
+
+ nav { max-height: 500px;}
+ label,input {display: none;}
+ li { width:14%;  float: left;}
+ .nav__item {
+  width:auto;
+}
+
+}
+
+/* =============================================================================
+  FORM
+============================================================================= */
+select.form,
+option.form,
+label.form,
+input.form {
+  display: inline;
+  font-family: $font-family--primary;
+  color: $color--neutral-dark;
+  font-size: $font-size--medium;
+  background-color: transparent; 
+  padding: 5px 9px;
+  border: none;
+}
+
+input.button,
+select.form,
+option.form,
+input.form {
+  border: solid 1px $color--neutral-xxlight;
+  margin-left: 10px;
+}
+
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:$color--theme-dark;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    display:inline-block;
+    font-family: $font-family--primary;
+    color: $color--neutral-dark;
+    font-size: $font-size--medium;
+     @include center(true, false);
+    margin-top: 20px;
+ 
+}
+
+label.form {
+  width: 300px;
+  display: inline-block;
+}
+.contact-form {
+  width:80%; 
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+@media all and ( min-width: $breakpoint--small ) {
+
+ label.form {
+  width: 450px;
+  display: inline-block;
+}
+
+.contact-form {
+  width:60%; 
+  margin-left:20%;
+  margin-right:20%;
+}
+ 
+}
+
+
+/* =============================================================================
+  DEMO FOOTER
+============================================================================= */
+.footer {
+  padding: 12px 0;
+  text-align: center;
+}
+
+@media all and ( min-width: $breakpoint--small ) {
+  .footer {
+    padding: 24px 0;
+  }
+}
+
+@media all and ( min-width: $breakpoint--medium ) {
+  .footer {
+    padding: 48px 0;
+  }
+}
+

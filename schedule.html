@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Bjork</title>
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascript/smooth-scroll.js"></script>  
+  <script type="text/javascript" src="javascript/video.js"></script> 
+</head>
+<body>
+  
+<header class="header">
+  
+     <div class="menu">
+     <input type="checkbox" id="toggle">
+      <label for="toggle">&#9776; menu</label>
+      <nav class="nav">    
+      <ul class="nav__items">
+        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="schedule.html" class="nav__link_selected">Schedule</a></li>
+        <li class="nav__item"><a href="purchase.html" class="nav__link">Purchase</a></li>
+        <li class="nav__item"><a href="venue.html" class="nav__link">Venue</a></li>
+      </ul>
+      </nav>  
+        </div>
+    <div class="container">
+      <h1 class="header__title">Bjork Digital</h1>
+    </div>
+    
+
+</header>
+
+<main class="content">
+ 
+  <section class="component__section">
+    <h2 class="component__sub-title">Schedule</h2>
+    <div style="text-align:center"> 
+    <video id="video1" controls autoplay>
+      <source src="Teaser.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <br><br>
+    </div>   
+        <p class="center">The Family Room is open</p>
+    <table class="center">
+    <tr>
+    <th>Date</th>
+    <th>Time</th>
+    </tr>
+    <tr>
+    <td>01. Dec 2016</td>
+    <td>13:00</td>
+    </tr>
+    <tr>
+    <td>02. Dec 2016</td>
+    <td>13:00</td>
+    </tr>
+    <tr>
+    <td>03. Dec 2016</td>
+    <td>11:00</td>
+    </tr>
+    <tr>
+    <td>04. Dec 2016</td>
+    <td>11:00</td>
+    </tr>
+    <tr>
+    <td>05. Dec 2016</td>
+    <td>13:00</td>
+    </tr>
+    <tr>
+    <td>06. Dec 2016</td>
+    <td>13:00</td>
+    </tr>
+    <tr>
+    <td>07. Dec 2016</td>
+    <td>13:00</td>
+    </tr>
+    <tr>
+    <td>08. Dec 2016</td>
+    <td>13:00</td>
+    </tr>
+    <tr>
+    <td><tr>
+    <td>09. Dec 2016</td>
+    <td>13:00</td>
+    </tr>
+    </table>	
+    </div>
+  </section>
+
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <script>
+     function offset(size)
+     {
+       if (size < 768){
+     	smoothScroll.init({offset: 250,}); //Offset for large menu in small screen
+       }
+       else
+       {
+     	smoothScroll.init({offset: 35,}); //Offset for small menu in large screen
+       }
+     }
+     var size = $(window).width();
+     offset(size); //find offset in begining
+     $(document).ready(function(){  //find offset if window resized
+     $(window).resize(function(){
+            var size = $(window).width();
+           offset(size);
+
+      });
+    });
+
+    </script>
+  </div>
+</footer>
+
+
+</body>
+</html>

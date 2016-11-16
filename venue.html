@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Bjork</title>
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascript/smooth-scroll.js"></script> 
+
+</head>
+<body>
+  
+<header class="header">
+  
+     <div class="menu">
+     <input type="checkbox" id="toggle">
+      <label for="toggle">&#9776; menu</label>
+      <nav class="nav">    
+      <ul class="nav__items">
+        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="schedule" class="nav__link">Schedule</a></li>
+        <li class="nav__item"><a href="purchase.html" class="nav__link">Purchase</a></li>
+        <li class="nav__item"><a href="venue.html" class="nav__link_selected">Venue</a></li>
+      </ul>
+      </nav>  
+        </div>
+    <div class="container">
+      <h1 class="header__title">Bjork Digital</h1>
+    </div>
+    
+
+</header>
+
+<main class="content">
+ 
+  <section class="component__section">
+    <h2 class="component__sub-title">Venue</h2>
+       <p class="bjork__excerpt">
+
+        <section class="column2">
+		<article class="dalkur1">
+			Harpa<br>
+			Austurbakki 2, 101 Reykjavík, Iceland<br>
+    			Tel: (+354) 528 5000<br>
+    			Tickets: (+354) 528 5050<br>
+			harpa@harpa.is<br>
+			<a href="http://www.harpa.is">www.harpa.is</a><br>
+			Open every day 08:00 – 24:00<br>
+        	</article>
+		<article class="dalkur2">
+			Opening hours<br>
+			<u>Box office</u><br>
+			Week days: 9:00 – 18:00<br>
+			Weekends: 10:00 – 18:00<br>
+			<br>
+			Office<br>
+			Week days: 9:00 – 17:00<br>
+			Weekends: Closed
+		</article>
+	</section>        
+    </div>
+     <section class="kort">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1739.6059651928313!2d-21.934890783728253!3d64.15033658359692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d674d3019cb491%3A0xa813064fd5697156!2sHarpa+Concert+Hall+and+Conference+Centre!5e0!3m2!1sen!2sis!4v1478892721825" frameborder="0" style="border:0" allowfullscreen></iframe>
+     </section> 
+ </section>
+
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <script>
+     function offset(size)
+     {
+       if (size < 768){
+     	smoothScroll.init({offset: 250,}); //Offset for large menu in small screen
+       }
+       else
+       {
+     	smoothScroll.init({offset: 35,}); //Offset for small menu in large screen
+       }
+     }
+     var size = $(window).width();
+     offset(size); //find offset in begining
+     $(document).ready(function(){  //find offset if window resized
+     $(window).resize(function(){
+            var size = $(window).width();
+           offset(size);
+
+      });
+    });
+
+    </script>
+  </div>
+</footer>
+
+
+</body>
+</html>
